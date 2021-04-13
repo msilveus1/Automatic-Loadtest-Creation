@@ -1,0 +1,7 @@
+Servers:
+
+server_ip (PK) | server_name | server_type | last_connection_date | first_connection_date
+
+Load Test
+Test Name | line number | Test Origin file path  (PK) | Test Origin Repository (PK) | Data Type | Data Source | test_server_ip (FK) | ci_cd_server_integration_ip
+    

@@ -1,0 +1,1 @@
+docker exec mariadbtest /usr/bin/mysql mysql < sql/setup.sql
