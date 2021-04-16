@@ -1,1 +1,32 @@
 version: 2.1
+
+commands:
+  build-rust:
+    path: ../rust/RestAPI
+    steps:
+      - run: 
+          name: Installing Rust Depenedencies
+          command: 'cargo install --path .'
+      - run: 
+          name: Build Cargo
+          command: 'cargo run'
+  build:
+    steps:
+    - checkout 
+    - build-rust
+
+executors:
+  machine-executor:
+    machine:
+      image: ubuntu-2004:202010-01
+
+jobs:
+  build-with-linux:
+    executor: machine-executor
+    steps:
+      - build
+
+workflows:
+  build-with-machine:
+    jobs:
+      - build-with-machine
