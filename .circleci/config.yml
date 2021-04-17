@@ -26,4 +26,4 @@ jobs:
 workflows:
   build-with-machine:
     jobs:
-      - build-with-machine
+      - build-with-linux
