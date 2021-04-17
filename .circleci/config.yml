@@ -1,16 +1,16 @@
 version: 2.1
 
 commands:
-  # build-rust:
-  #   steps:
-  #     - run: 
-  #         name: Installing Rust Depenedencies
-  #         command: 'cargo install --path ../rust/RestAPI'
+  build-rust:
+    steps:
+      - run: 
+          name: Installing Rust Depenedencies
+          command: 'cargo install --path ../rust/RestAPI'
 
   build:
     steps:
     - checkout 
-    # - build-rust
+    - build-rust
 
 executors:
   machine-executor:
