@@ -4,8 +4,11 @@ commands:
   install-cargo:
     steps:
       - run:
+          name: Updating apt-get
+          command: 'sudo apt-get update -y'
+      - run: 
           name: Installing Cargo
-          command: 'curl https://sh.rustup.rs -sSf | sh'
+          command: 'sudo apt-get install -y cargo'
 
   install-rust:
     steps:
