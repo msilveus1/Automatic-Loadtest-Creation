@@ -1,7 +1,13 @@
 version: 2.1
 
 commands:
-  build-rust:
+  install-cargo:
+    steps:
+      - run:
+          name: Installing Cargo
+          command: 'curl https://sh.rustup.rs -sSf | sh'
+
+  install-rust:
     steps:
       - run: 
           name: Installing Rust Depenedencies
@@ -10,7 +16,9 @@ commands:
   build:
     steps:
     - checkout 
-    - build-rust
+    - install-cargo
+    - install-rust
+
 
 executors:
   machine-executor:
