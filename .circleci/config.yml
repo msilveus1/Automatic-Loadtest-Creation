@@ -17,7 +17,7 @@ commands:
           command: 'pwd'
       - run:
           name: DEBUG getting file path 2
-          command: 'ls -a ../rust/RestAPI'
+          command: 'ls -a'
       - run:
           name: Installing Rust Depenedencies
           command: 'cargo install --path ../rust/RestAPI'
