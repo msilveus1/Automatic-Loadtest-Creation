@@ -20,7 +20,7 @@ commands:
           command: 'ls -a'
       - run:
           name: Installing Rust Depenedencies
-          command: 'cargo install --path ../rust/RestAPI'
+          command: 'cargo install --path rust/RestAPI'
 
   build:
     steps:
