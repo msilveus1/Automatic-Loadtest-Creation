@@ -6,13 +6,16 @@ commands:
       - run:
           name: Updating apt-get
           command: 'sudo apt-get update -y'
-      - run: 
           name: Installing Cargo
           command: 'sudo apt-get install -y cargo'
 
   install-rust:
     steps:
       - run: 
+          name: DEBUG getting file path
+          command: 'pwd'
+          name: DEBUG getting file path 2
+          command: 'ls -a ../rust/RestAPI'
           name: Installing Rust Depenedencies
           command: 'cargo install --path ../rust/RestAPI'
 
