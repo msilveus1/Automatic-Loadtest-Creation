@@ -11,7 +11,7 @@ commands:
           command: 'sudo apt-get install -y cargo'
       - run: 
           name: Installing rustup
-          command: "curl --proto '=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+          command: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
       - run: 
           name: Installing Nightly
           command: 'rustup install nightly'
