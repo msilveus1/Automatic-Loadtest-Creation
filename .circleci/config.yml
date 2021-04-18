@@ -16,7 +16,7 @@ commands:
           name: Installing Nightly
           command: 'rustup install nightly'
           
-  install-rust:
+  install-rust-dependecies:
     steps:
       - run: 
           name: DEBUG getting file path
@@ -27,12 +27,17 @@ commands:
       - run:
           name: Installing Rust Nightly Channel
           command: 'cargo +nightly install --path rust/RestAPI'
+    build-rest-api:
+      steps:
+        - run: 
+            name: Building the application
+            command: 'cd rust/RestAPI; cargo run'
 
   build:
     steps:
     - checkout 
     - install-cargo
-    - install-rust
+    - install-rust-dependecies
 
 
 executors:
