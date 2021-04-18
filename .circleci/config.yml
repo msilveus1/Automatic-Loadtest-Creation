@@ -10,8 +10,8 @@ commands:
           name: Installing Cargo
           command: 'sudo apt-get install -y cargo'
       - run: 
-          name: Install rustup
-          command: 'curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
+          name: Installing rustup
+          command: "curl --proto '=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
       - run: 
           name: Installing Nightly
           command: 'rustup install nightly'
