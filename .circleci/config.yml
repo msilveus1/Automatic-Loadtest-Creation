@@ -9,7 +9,10 @@ commands:
       - run:
           name: Installing Cargo
           command: 'sudo apt-get install -y cargo'
-
+      - run: 
+          name: Installing Nightly
+          command: 'rustup install nightly'
+          
   install-rust:
     steps:
       - run: 
@@ -19,8 +22,8 @@ commands:
           name: DEBUG getting file path 2
           command: 'ls -a'
       - run:
-          name: Installing Rust Depenedencies
-          command: 'cargo install --path rust/RestAPI'
+          name: Installing Rust Nightly Channel
+          command: 'cargo +nightly install --path rust/RestAPI'
 
   build:
     steps:
