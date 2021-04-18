@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS Loadtest_Automation;
 USE Loadtest_Automation;
 
-CREATE TABLE Servers (
+CREATE TABLE Load_Test_Servers (
     server_ip INT UNSIGNED,
     server_name VARCHAR(128),
     server_type VARCHAR(64),

@@ -6,7 +6,7 @@ commands:
       - run: 
           name: Building the application
           command: 'cd rust/RestAPI; cargo run'
-          
+
   install-cargo:
     steps:
       - run:
@@ -41,6 +41,7 @@ commands:
     - checkout 
     - install-cargo
     - install-rust-dependecies
+    - build-rest-api
 
 
 executors:
