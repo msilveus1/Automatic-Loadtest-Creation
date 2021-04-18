@@ -27,6 +27,7 @@ commands:
       - run:
           name: Installing Rust Nightly Channel
           command: 'cargo +nightly install --path rust/RestAPI'
+    
     build-rest-api:
       steps:
         - run: 
