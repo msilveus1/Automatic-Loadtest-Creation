@@ -10,8 +10,14 @@ commands:
           name: Installing Cargo
           command: 'sudo apt-get install -y cargo'
       - run: 
+          name: Pulling down rustup Install Script
+          command: "curl --proto '=http\' --tlsv1.2 -sSf https://sh.rustup.rs  > rust.sh"
+      - run: 
+          name: Changing permissions on rustup script
+          command: 'chmod +x ./rust.sh'
+      - run:
           name: Installing rustup
-          command: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+          command: './rust.sh --yes'
       - run: 
           name: Installing Nightly
           command: 'rustup install nightly'
