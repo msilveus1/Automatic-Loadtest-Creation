@@ -1,6 +1,12 @@
 version: 2.1
 
 commands:
+  build-rest-api:
+    steps:
+      - run: 
+          name: Building the application
+          command: 'cd rust/RestAPI; cargo run'
+          
   install-cargo:
     steps:
       - run:
@@ -28,11 +34,7 @@ commands:
           name: Installing Rust Nightly Channel
           command: 'cargo +nightly install --path rust/RestAPI'
     
-    build-rest-api:
-      steps:
-        - run: 
-            name: Building the application
-            command: 'cd rust/RestAPI; cargo run'
+
 
   build:
     steps:
