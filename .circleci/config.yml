@@ -5,7 +5,7 @@ commands:
     steps:
       - run: 
           name: Building the application
-          command: 'cd rust/RestAPI; cargo +nightly build'
+          command: 'cd rust/rest_api; cargo +nightly build'
 
   install-cargo:
     steps:
@@ -32,7 +32,7 @@ commands:
           command: 'ls -a'
       - run:
           name: Installing Rust Nightly Channel
-          command: 'cargo +nightly install --path rust/RestAPI'
+          command: 'cargo +nightly install --path rust/rest_api'
     
 
 
