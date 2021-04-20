@@ -5,7 +5,7 @@ commands:
     steps:
       - run: 
           name: Building the application
-          command: 'cd rust/RestAPI; cargo +nightly run'
+          command: 'cd rust/RestAPI; cargo +nightly build'
 
   install-cargo:
     steps:
