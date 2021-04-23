@@ -2,10 +2,9 @@ CREATE DATABASE IF NOT EXISTS Loadtest_Automation;
 USE Loadtest_Automation;
 
 CREATE TABLE Load_Test_Definition(
-    config_id BINARY(16)
+    config_id BINARY(16) 
     data_type VARCHAR(16),
-    data_source VARCHAR(MAX),
-    FOREIGN KEY (test_server_ip) REFERENCES Servers(server_ip);
+    data_source VARCHAR(MAX)
 );
 
 CREATE TABLE DB_Version(
