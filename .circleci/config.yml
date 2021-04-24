@@ -1,6 +1,11 @@
 version: 2.1
 
 commands:
+  setup-mariadb:
+    steps:
+      - run:
+          name: Setting up maradb
+          command: bash shell/setup.sh 
   build-rest-api:
     steps:
       - run: 
@@ -39,6 +44,7 @@ commands:
   build:
     steps:
     - checkout 
+    - setup-mariadb
     - install-cargo
     - install-rust-dependecies
     - build-rest-api

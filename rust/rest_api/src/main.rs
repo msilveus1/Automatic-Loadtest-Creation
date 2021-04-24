@@ -1,5 +1,7 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 #[macro_use] extern crate rocket;
+#[ path = "services/configuration_service.rs"] mod configuration_service;
+
 
 use rocket::http::RawStr;
 // use serde::Deserialize;
@@ -22,6 +24,9 @@ fn get_test_config_template() -> content::Json<&'static str> {
 
 
 fn main() {
+    configuration_service::get_configuration_by_id(8);
+
+
     rocket::ignite()
     .mount("/api/v1", routes![get_test_config,get_test_config_template])
     .launch();   
