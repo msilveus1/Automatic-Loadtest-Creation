@@ -1,7 +1,14 @@
-Servers:
+Test Configuration Table
+| Data Type Configuration ID (FK) | Test Synchronity Type | Tested Applicaiton Configuration ID (FK) | Incrementing Test Configuration ID (PK) | Report Configuration ID (FK) |Other Possible fields (TBD)
 
-server_ip (PK) | server_name | server_type | last_connection_date | first_connection_date
+Data Type Configuration Table
+| Data Type Configuration ID (PK) | Data Type Configuration Text/Fields (TBD)
 
-Load Test
-Test Name | line number | Test Origin file path  (PK) | Test Origin Repository (PK) | Data Type | Data Source | test_server_ip (FK) | ci_cd_server_integration_ip
-    
+Tested Application Configuration
+| Tested Applicaiton Configuration ID | Tested Applicaiton Configuration ID (PK) 
+
+Test Run Table
+| Test Configuration ID (FK) | Test Run ID (PK) | Time Run | Duration | Status
+
+Report Generation Config Table
+| Report Configruration ID (PK) | Report Configuration Text/Fields (TBD)
